@@ -9,3 +9,19 @@ http://wwd.ca/blog/2009/07/09/pep-8-cheatsheet/ for an up-to-date version
 of this cheatsheet.
 """
 __author__ = 'D Latham'
+
+import kivy
+kivy.require('1.9.0') # replace with your current kivy version !
+
+from kivy.app import App
+from kivy.uix.label import Label
+
+
+class MyApp(App):
+
+    def build(self):
+        return Label(text='Hello world')
+
+
+if __name__ == '__main__':
+    MyApp().run()
