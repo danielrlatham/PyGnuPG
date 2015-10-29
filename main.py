@@ -10,8 +10,20 @@ of this cheatsheet.
 """
 __author__ = 'D Latham'
 
-import kivy
-kivy.require('1.9.0') # replace with your current kivy version !
+import sys
+import PyGnuPGLib.util.ErrorBuilder as Error
+import PyGnuPGLib.util.ErrorCodes as ECodes
+
+try:
+    # Python version must be >= 3.3
+    assert sys.version_info.major >= 3 and sys.version_info.minor >= 3
+except AssertionError:
+    # Print error, exit with error code
+    Error.build_error('Incorrect Python version. Require \'3.3+\'')
+    exit(ECodes.Codes.py_version)
+
+from kivy import require
+require('1.9.0') # replace with your current kivy version !
 
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout

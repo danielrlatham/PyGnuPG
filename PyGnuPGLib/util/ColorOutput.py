@@ -12,8 +12,6 @@ __author__ = 'D Latham'
 
 
 class Colors:
-    def __init__(self):
-        pass
 
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'

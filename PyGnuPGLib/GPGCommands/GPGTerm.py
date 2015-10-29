@@ -151,7 +151,6 @@ class __commands:
     # OpenPGP.
     export_all = '–export-all'
 
-
     # Same as –export, but does export the secret keys. This is normally not
     # very useful and a security risk. the second form of the command has the
     # special property to render the secret part of the primary key useless;
@@ -159,7 +158,6 @@ class __commands:
     # expected to successful import such a key.
     export_secret_keys = '–export-secret-keys'
     export_secret_subkeys = '–export-secret-subkeys'
-
 
     # Import/merge keys. This adds the given keys to the keyring. The fast
     # version does not build the trustdb; this can be done at any time with the
@@ -169,7 +167,6 @@ class __commands:
     # but does only the merging of new signatures, user-IDs and subkeys.
     import_ = '–import'
     fast_import_ = '–fast-import'
-
 
     # Import the keys with the given key IDs from a HKP keyserver. Option
     # –keyserver must be used to give the name of this keyserver.
@@ -205,6 +202,7 @@ class __commands:
     # Print usage information. This is a really long list even it does list
     # not all options.
     h = '-h'
+
 
 class __options:
     pass
