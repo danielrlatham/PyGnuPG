@@ -7,9 +7,7 @@ This is not meant to be changed except early in the project
 __author__ = 'D Latham'
 
 
-"""Holds all gpg commands and calls to OS
-Includes documentation
-"""
+# Holds all gpg commands and calls to OS
 class Commands:
     # Make a signature. This command may be combined with –encrypt.
     s = '-s'
@@ -186,6 +184,8 @@ class Commands:
     help = '-help'
 
 
+# Holds all options
+# NOTE: options do not go with every command
 class Options:
     # Long options can be put in an options file (default "~/.gnupg/options").
     # Do not write the 2 dashes, but simply the name of the option and any

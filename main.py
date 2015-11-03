@@ -11,8 +11,8 @@ of this cheatsheet.
 __author__ = 'D Latham'
 
 import sys
-import PyGnuPGLib.util.ErrorBuilder as Error
-import PyGnuPGLib.util.ErrorCodes as ECodes
+import lib.util.ErrorBuilder as Error
+import lib.util.ErrorCodes as ECodes
 
 try:
     # Python version must be >= 3.3
