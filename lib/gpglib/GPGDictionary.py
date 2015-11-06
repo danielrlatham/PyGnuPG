@@ -637,3 +637,6 @@ class Options:
 
     # Don't include the version string in ASCII armored output
     no_emit_version = '--no-emit-version'
+
+    # When combined with '-e', encrypts symmetrically(same key)
+    symmetric = '--symmetric'

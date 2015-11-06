@@ -58,3 +58,6 @@ docs/_build/
 # PyBuilder
 target/
 
+# For test_data
+test_data/*.asc
+test_data/*.gpg
