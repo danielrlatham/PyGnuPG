@@ -64,3 +64,6 @@ test_data/*.gpg
 
 # For idea
 .idea
+
+# For GnuEMACS save files
+*~

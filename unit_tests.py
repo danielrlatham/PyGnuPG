@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Custom error codes with explanation documentation
+"""This module's docstring summary line.
 This is a multi-line docstring. Paragraphs are separated with blank lines.
 Lines conform to 79-column limit.
 Module and packages names should be short, lower_case_with_underscores.
@@ -11,10 +11,9 @@ of this cheatsheet.
 __author__ = 'D Latham'
 
 
-class Codes:
-    # Wrong python version, requires 3.3+
-    py_version = 101
-    # Chose NO to continuing with '--text-mode'
-    no_text_mode = 51
-    # Chose to exit by user choice
-    chosen_exit = 0
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()

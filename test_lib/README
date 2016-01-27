@@ -1,0 +1,7 @@
+test_lib holds functions to unittest(using unittest library in python) functions in the {project_root}/lib package hierarchy.
+
+You invoke all test functions by calling unit_tests.py in {project_root}.
+
+To add a unittest, use the following guide:
+
+TODO: write guide

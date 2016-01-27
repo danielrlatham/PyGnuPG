@@ -6,7 +6,7 @@ Currently only supporting Linux(no apple computer nearby)
 import os
 import platform
 import subprocess
-from GPGDictionary import Commands, Options
+from lib.gpglib.GPGDictionary import Commands, Options
 
 __author__ = 'D Latham'
 
@@ -116,6 +116,13 @@ class API(object):
         o = Options.o
         temp = [o, out_file, d, in_file]
         self.execute(temp)
+
+    def list_public_keys(self):
+        list_keys = Commands.list_public_keys
+        self.execute([list_keys])
+
+    def list_secret_keys(self):
+        list_keys = Commands.l
 
 
 def test_encrypt():
