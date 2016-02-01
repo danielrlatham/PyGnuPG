@@ -1,0 +1,11 @@
+Thanks for using PyGnuPG.
+Basic help can be given with the '-h' flag.
+More advanced help is given with '-h [other_flag]' to learn
+ about a specific other flag.
+
+Other flags:
+
+-v, --version          : Prints version information to stdout
+--text-mode            : Runs PyGnuPG in text-mode ignoring the GUI branch, also
+                         recognized as a way to easily develop solutions to
+                         complicated problems unrelated to GUI

@@ -23,6 +23,8 @@ class ArgumentBranch(object):
 
     @staticmethod
     def run_gui():
+        print('graphics loop')
+        exit(ECodes.Codes.chosen_exit)
         import lib.interface.graphicsmode.run as GraphicsLoop
         GraphicsLoop.run_gui()
 
@@ -30,38 +32,35 @@ class ArgumentBranch(object):
     def disp_version_info(self):
         f = open('VERSION', mode='r')
         for line in f:
-            print(line)
+            print(line.rstrip('\n'))
 
     def help(self):
-        help_string = 'Thanks for using PyGnuPG.\n'+\
-                      'Basic help can be given with the \'-h\' flag.\n'+\
-                      'More advanced help is given with \'-h [other_flag]\' to learn\n'+\
-                      ' about a specific other flag'
-        # print('Help Method')
-        print(ColorO.Colors.okay_green(help_string))
+        f = open('HELP', mode='r')
+        for line in f:
+            print(ColorO.Colors.okay_green(line.rstrip('\n')))
 
     def decide(self):
         if len(self.args) > 1:
+            # there are options, so check them
             pass
         else:
-            # no arguments
+            # no arguments, so run GUI program
             self.run_gui()
 
         # Test args values
         print(self.args)
 
-        # Check if '--version' or '-v' is present
+        # Check if '--version' or '-v' is present anywhere
         for arg in self.args:
             if arg == '-v' or arg == '--version':
                 self.disp_version_info()
 
-        if self.args[1] == '-h':
-            # Check to make sure -h is alone
+        # Check if '--help' or 'h' is present in first slot, Display help
+        # information
+        if self.args[1] == '-h' or self.args[1] == '--help':
             self.help()
 
-            # Provide help text based on following flags
-            #TODO: Following flags
-
+        # CHeck if '--text-mode' is present in first slot, if so run in text
         if self.args[1] == '--text-mode':
             print(ColorO.Colors.okay_blue('\'--text-mode\' option chosen\n'))
             ans = input('This option is for experimental and development only.'+
@@ -72,8 +71,7 @@ class ArgumentBranch(object):
                 TextLoop.loop()
             else:
                 exit(ECodes.Codes.no_text_mode)
-        else:
-            pass
+
 
 class Depends(object):
     def __init__(self):
@@ -91,6 +89,7 @@ class Depends(object):
     def test(self):
         print('How do I jedi?')
         print('yee')
+
 
 def main():
     ab = ArgumentBranch()
